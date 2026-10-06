@@ -4,32 +4,27 @@ Showroom site for [reasonance-lab](https://github.com/reasonance-lab) — a sing
 portfolio linking out to projects across AI & learning, chemistry & science,
 robotics & hardware, and developer tools.
 
-**Live:** https://reasonance-lab.github.io/
+**Live:** https://reasonance-lab.github.io/show/
 
 *reasonance* /ˌriː.zəˈnɑːns/ — *n.* the amplification an idea gains when
 reasoning is iterated until it rings true.
 
 ## Editing content
 
-All project entries live in **[`js/projects.data.js`](js/projects.data.js)** — one array,
-one object per card. The schema is documented at the top of that file. Add, remove or
-reorder entries there; nothing else needs to change.
+The homepage is the self-contained `index.html` from version 1 deployed at
+[Reasonance on Sites](https://reasonance.jivishov.chatgpt.site). Its content,
+styles, JavaScript, favicon, and SVG illustrations are inline.
 
-> Current entries are **placeholders**: names and descriptions are modeled on real
-> projects, but most `links` are empty pending final URLs. Fill in `links.live` /
-> `links.repo` as projects go public, and flip `status` accordingly.
-
-Domain sections (headings, blurbs, hues) are static HTML in `index.html` — each
-`<section class="domain">` sets its accent with `style="--hue:N"`, and every card
-inside inherits it. The `<noscript>` lists in each section should be kept roughly in
-sync with the data file by hand.
+The previous GitHub version is preserved in
+[`codex/reasonance-backup-2026-10-06`](https://github.com/reasonance-lab/show/tree/codex/reasonance-backup-2026-10-06)
+at commit `8301a2f31981a57b76f4331a413fb621d5593897`.
 
 ## Stack
 
-None. Hand-written HTML/CSS/vanilla JS, no build step, no dependencies beyond one
-self-hosted variable font ([Syne](https://fonts.google.com/specimen/Syne), OFL).
-The hero is a ~100-line canvas drawing layered standing waves; it pauses when
-hidden and respects `prefers-reduced-motion`.
+HTML/CSS/vanilla JavaScript with no build step or external runtime dependencies.
+The homepage includes project previews and category filters and respects
+`prefers-reduced-motion`. The earlier design's asset files remain in the repository
+but are not loaded by the new homepage.
 
 ## Local development
 
